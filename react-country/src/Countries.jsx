@@ -5,13 +5,17 @@ const Countries = ({countriesPromise}) => {
 
     const countries = use(countriesPromise);
     console.log(countries);
+
+   // console.log(countries.population.population);
     
     return (
         <div>
             <h1>This is country..: {countries.countries.length}</h1>
             {
-                countries.countries.map(country => <Country
-                key={country.cca3} country={country}
+                countries.countries.map(country => 
+                <Country
+                key={country.cca3.cca3} 
+                country={country}
 
                 ></Country>)
             }
